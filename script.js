@@ -138,17 +138,14 @@ const chef = {
 // 🎯 Snack  (Bonus)
 // Crea una funzione che permette la copia profonda (deep copy) di un oggetto, che copia anche i suoi metodi (proprietà che contengono funzioni). Usa l’oggetto di Code Question 6 come test.
 
-
 let newChef = [];
 const cloneChef = (obj) => {
   // Controlla se obj è null o non è un oggetto o un array, se è così, restituisce obj
   if (obj === null || typeof obj !== 'object') {
     return obj;
   }
-
   // Crea un nuovo oggetto o array in base al tipo di obj, per evitare che vengano modificati i riferimenti dell'oggetto originale
   const clone = Array.isArray(obj) ? [] : {};
-
   // Clone ricorsivo di ogni proprietà dell'oggetto o dell'array originale
   for (let key in obj) {
     if (obj.hasOwnProperty(key)) {
@@ -166,4 +163,3 @@ console.log(chef);
 console.log(newChef);
 
 // ⚠️ Serve usare una funzione ricorsiva! (fai un po’ di ricerca).
-
